@@ -1,12 +1,18 @@
 [project]
 name = "sleep-diary"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sleep diary: log your night sleep and check them compared to a goal."
 readme = "README.md"
 authors = [
     { name = "kanoka sakurai", email = "kanokanosakusaku@gmail.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.10"
+keywords = ["sleep", "record", "goal"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
 dependencies = [
     "typer>=0.29.1",
 ]
@@ -22,3 +28,7 @@ build-backend = "uv_build"
 dev = [
     "pytest>=9.2.0",
 ]
+
+[project.urls]
+Homepage = "https://github.com/mii0829/sleep-diary"
+Issues = "https://github.com/mii0829/sleep-diary/issues"
