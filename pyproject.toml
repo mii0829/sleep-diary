@@ -1,6 +1,6 @@
 [project]
 name = "sleep-diary"
-version = "0.1.0"
+version = "0.2.0"
 description = "Sleep diary: log your night sleep and check them compared to a goal."
 readme = "README.md"
 authors = [
