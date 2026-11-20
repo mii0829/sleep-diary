@@ -79,6 +79,17 @@ Records are stored in 'sleep.csv' in the current folder
 | Bump the version | `uv version --bump minor` |
 | Build the wheel and sdist | ` uv build ` |
 
+## Static Code analysis 
+I used Ruff 
+this is used as linter and formatter. 
+installed with the dev dependencies (`uv sync `). the rules are configured in '[tool.ruff]` in `pyproject.toml`. 
+
+```
+uv run ruff check .
+uv run ruff check --fix .
+uv run ruff format .
+```
+
 ## Project struvture
 ``` tree
 .
