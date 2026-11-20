@@ -2,5 +2,6 @@
 
 from sleep_diary.cli import app
 
+
 def main() -> None:
     app()

@@ -2,8 +2,7 @@
 
 import csv
 from datetime import date
-from pathlib import Path 
-
+from pathlib import Path
 
 FIELDS = ["date", "hours"]
 
@@ -32,6 +31,6 @@ def load_records(path: Path) -> list:
         reader = csv.DictReader(f)
         for row in reader:
             day = row["date"]
-            hours = float(row["hours"]) 
+            hours = float(row["hours"])
             records.append((day, hours))
     return records

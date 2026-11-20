@@ -9,13 +9,15 @@ from sleep_diary.storage import add_record, load_records
 
 app = typer.Typer(help="Log your sleep and see how you are doing.")
 DATA = typer.Option(Path("sleep.csv"), help="CSV file with your records.")
-GOAL = typer.Option(8.0, help="Target hours of sleep per night.")   
+GOAL = typer.Option(8.0, help="Target hours of sleep per night.")
 
-@app.command() 
+
+@app.command()
 def add(hours: float, data: Path = DATA) -> None:
     """Record last night's sleep, e.g. `sleep-diary add 7.5`."""
     add_record(data, hours)
     typer.echo(f"Saved {hours} h to {data}")
+
 
 @app.command()
 def report(data: Path = DATA, goal: float = GOAL) -> None:
