@@ -3,6 +3,7 @@ name = "sleep-diary"
 version = "0.2.0"
 description = "Sleep diary: log your night sleep and check them compared to a goal."
 readme = "README.md"
+license = "MIT" 
 authors = [
     { name = "kanoka sakurai", email = "kanokanosakusaku@gmail.com" }
 ]
@@ -27,8 +28,25 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "pytest>=9.2.0",
+    "ruff>=0.17.6",
 ]
 
 [project.urls]
 Homepage = "https://github.com/mii0829/sleep-diary"
 Issues = "https://github.com/mii0829/sleep-diary/issues"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "SIM",  # flake8-simplify
+    "N",    # pep8-naming
+]
